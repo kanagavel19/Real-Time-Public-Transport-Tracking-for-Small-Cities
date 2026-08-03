@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TransitTrace — Live Bus Tracker</title>
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="app-header">
+    <h1>🚌 TransitTrace</h1>
+    <p>Live public transport tracking for our city</p>
+  </header>
+
+  <main class="app-main">
+    <section class="sidebar">
+      <h2>Routes</h2>
+      <div id="route-list" class="route-list">Loading routes…</div>
+
+      <h2>Fleet Status</h2>
+      <div id="bus-list" class="bus-list">Loading buses…</div>
+    </section>
+
+    <section class="map-section">
+      <div id="map"></div>
+    </section>
+  </main>
+
+  <footer class="app-footer">
+    <span id="connection-status">Connecting…</span>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
