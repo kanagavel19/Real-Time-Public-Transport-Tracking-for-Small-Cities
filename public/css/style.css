@@ -1,0 +1,105 @@
+:root {
+  --primary: #1e6f5c;
+  --primary-dark: #144d3f;
+  --accent: #f4a259;
+  --bg: #f7f9f8;
+  --card-bg: #ffffff;
+  --text: #1c1c1c;
+  --muted: #6b7280;
+  --border: #e2e8e6;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.app-header {
+  background: var(--primary);
+  color: white;
+  padding: 16px 24px;
+}
+
+.app-header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.app-header p {
+  margin: 4px 0 0;
+  font-size: 0.9rem;
+  color: #d7ede6;
+}
+
+.app-main {
+  display: flex;
+  height: calc(100vh - 96px);
+}
+
+.sidebar {
+  width: 300px;
+  padding: 16px;
+  background: var(--card-bg);
+  border-right: 1px solid var(--border);
+  overflow-y: auto;
+}
+
+.sidebar h2 {
+  font-size: 1rem;
+  color: var(--primary-dark);
+  margin: 16px 0 8px;
+}
+
+.route-list, .bus-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.route-card, .bus-card {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-size: 0.85rem;
+}
+
+.route-card strong, .bus-card strong {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--primary-dark);
+}
+
+.bus-card .speed {
+  color: var(--muted);
+}
+
+.map-section {
+  flex: 1;
+}
+
+#map {
+  height: 100%;
+  width: 100%;
+}
+
+.app-footer {
+  background: var(--primary-dark);
+  color: #cfe8de;
+  text-align: center;
+  padding: 8px;
+  font-size: 0.8rem;
+}
+
+.bus-marker {
+  background: var(--accent);
+  border-radius: 50%;
+  width: 14px;
+  height: 14px;
+  border: 2px solid var(--primary-dark);
+}
