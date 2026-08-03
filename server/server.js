@@ -10,11 +10,18 @@ const BusModel = require("./models/Bus");
 
 const app = express();
 const server = http.createServer(app);
-const io = new Server(server);
+const io = new Server(server, {
+  cors: {
+    origin: "*", // allow all origins to simplify setup
+    methods: ["GET", "POST"]
+  }
+});
 
 const PORT = process.env.PORT || 3000;
 
 app.use(express.json());
+const cors = require("cors");
+app.use(cors());
 app.use(express.static(path.join(__dirname, "..", "public")));
 app.set("io", io);
 

@@ -1,5 +1,5 @@
 // public/js/app.js
-const socket = io();
+const socket = io("https://real-time-public-transport-tracking-for-vjd5.onrender.com");
 
 const map = L.map("map").setView([12.976, 77.602], 14);
 
@@ -48,7 +48,7 @@ function updateBusMarker(bus) {
 }
 
 async function loadRoutes() {
-  const res = await fetch("/api/routes");
+  const res = await fetch("https://real-time-public-transport-tracking-for-vjd5.onrender.com/api/routes");
   const routes = await res.json();
 
   const container = document.getElementById("route-list");
